@@ -1,0 +1,13 @@
+
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "username": "Sura",
+    "title": "Kittie Post"
+}
+
+###
+
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3VyYSIsInRpdGxlIjoiS2l0dGllIFBvc3QiLCJpYXQiOjE2MDIyNDkxMTl9.TBK9nRueauf6FO451XCggJ2O9YbwZaP2cdgNjlbV0n8
