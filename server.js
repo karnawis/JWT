@@ -34,18 +34,6 @@ const authenticateToken = (request, response, next) => {
   })
 }
 
-  function authenticateTokens(request, response, next) {
-    const authHeader = request.headers['authorization']
-    const token = authHeader && authHeader.split(' ')[1]
-    if (token == null) return response.sendStatus(401)
-  
-    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-      console.log(err)
-      if (err) return res.sendStatus(403)
-      request.user = user
-      next()
-    })
-  }
 
 //Routes
 app.post('/login', (request, response) => {
